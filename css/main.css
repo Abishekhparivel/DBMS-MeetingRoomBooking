@@ -1,0 +1,187 @@
+/* -------------------------------- Primary style -------------------------------- */
+html * {
+	margin: 0;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+body {
+	font-size: 100%;
+	font-family: cursive, sans-serif;
+	color: #404040;
+	background-color: whitesmoke;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+}
+
+input, textarea {
+	font-family: cursive, sans-serif;
+	font-size: 16px;
+	font-size: 1rem;
+}
+
+input::-ms-clear, textarea::-ms-clear {
+	display: none;
+}
+
+header{position: relative;display: block;padding: 4% 10%;background: linear-gradient(to left, #485563, #29323c);}
+@media only screen and (max-width: 700px) {
+	header{position: relative;background: darkslategrey;display: block;padding: 10% 5%;}
+}
+header div a{float:left;color: lavender;}
+header nav{float: right;display: inline;}
+header::after{clear: both;}
+nav a.signin, nav a.signup {
+	color: lavender;
+    padding: .6em 1em;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    /*border-radius: 50em;*/
+}
+nav a.signin {
+	background: forestgreen;
+	border: none;
+}
+nav a.signin:hover {
+	background: green;
+	border: none;
+}
+nav a.signup {
+	background: steelblue;
+	border: none;
+}
+nav a.signup:hover {
+	background: cornflowerblue;
+	border: none;
+}
+
+footer{
+	position: absolute;
+	left: 40%;
+	top: 50%;
+}
+
+/* -------------------------------- Popup style -------------------------------- */
+/* Outer */
+.popup {
+    width:100%;
+    height:100%;
+    display:none;
+    position:fixed;
+    top:0px;
+    left:0px;
+    background:rgba(0,0,0,0.75);
+    box-shadow: inset 0px 0px 10px 0px #ABABAB, -1px 1px 17px 7px #0F0000;
+    -webkit-box-shadow: inset 0px 0px 10px 0px #ABABAB, -1px 1px 17px 7px #0F0000;
+    -moz-box-shadow: inset 0px 0px 10px 0px #ABABAB,-1px 1px 17px 7px #0F0000;
+    -o-box-shadow: inset 0px 0px 10px 0px #ABABAB,-1px 1px 17px 7px #0F0000;
+}
+ 
+/* Inner */
+.popup-inner {
+    max-width:650px;
+    width:70%;
+    position:absolute;
+    top:50%;
+    left:50%;
+    -webkit-transform:translate(-50%, -50%);
+    transform:translate(-50%, -50%);
+    box-shadow:0px 2px 6px rgba(0,0,0,1);
+    background:#fff;
+}
+
+.popup-header{
+	background: seagreen;
+	color: whitesmoke;
+	text-align: center;
+}
+
+.popup-content{
+	text-align: center;
+	display: block;
+	padding: 10px;
+	list-style-type: none;
+}
+
+.popup-content input{
+    width: 80%;
+    padding: 1em 0em 1em 0.5em;
+    font-size: 18px;
+    outline: none;
+    border: none;
+    border-bottom: solid 2px lightgrey;
+    font-weight: 100;
+}
+
+input[type="text"]:focus, input[type="password"]:focus{
+	border-bottom: solid 2px seagreen;
+}
+
+input[type="submit"] {
+	width: 84%;
+	margin: 12px;
+    font-weight: 600;
+    transition: 0.1s all;
+    -webkit-transition: 0.1s all;
+    -moz-transition: 0.1s all;
+    -o-transition: 0.1s all;
+    cursor: pointer;
+    outline: none;
+    padding: 10px;
+    border: none;
+    background: cyan;
+}
+
+.popup-footer{
+	display: block;
+	width: 80%;
+	padding: 0 10%;
+}
+.account{
+	float: left;
+	color: royalblue;
+	margin-bottom: 20px;
+}
+.action{
+	float: right;
+	color: royalblue;
+	margin-bottom: 20px;
+}
+
+.popup-outer{
+	display: grid;
+	text-align: center;
+	width: 80%;
+	padding: 0 10%;
+    margin-bottom: 4%;
+}
+
+/* Close Button */
+.popup-close {
+    padding: 10px;
+    display: inline-block;
+    position: absolute;
+    top: 22px;
+    right: 18px;
+    transition: ease 0.25s all;
+    -webkit-transform: translate(50%, -50%);
+    transform: translate(50%, -50%);
+    background: rgba(0,0,0,0.8);
+    font-family: Sans-Serif;
+    font-size: 25px;
+    text-align: center;
+    line-height: 100%;
+    color: #fff;
+}
+ 
+.popup-close:hover {
+    -webkit-transform:translate(50%, -50%) rotate(180deg);
+    transform:translate(50%, -50%) rotate(180deg);
+    background:rgba(0,0,0,1);
+    text-decoration:none;
+}
