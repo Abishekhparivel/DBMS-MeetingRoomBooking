@@ -1,7 +1,7 @@
 <?php
 	session_start();
 	if(isset($_SESSION['user']) && $_SESSION['user'] !== ''){
-		header('Location: summa.php');
+		header('Location: myMeetings.php');
 	}
 	else if(isset($_SESSION['loginerror']) && $_SESSION['loginerror'] !== ''){
 		$loginerror = $_SESSION['loginerror'];

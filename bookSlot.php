@@ -49,102 +49,143 @@
 
  	</head>
  	<body>
+		<div class="wrapper">
+		    <!-- Sidebar Holder -->
+		    <nav id="sidebar">
+		        <div class="sidebar-header">
+		            <div class="navbar-brand">
+		                <!-- nav bar heading goes here, i guess -->
+		            </div>
+		        </div>
+		        <ul class="list-unstyled components">
+		            <li> <a href="myMeetings.php"><i class="fa fa-university" aria-hidden="true"></i> myMeetings</a> </li>
+		            <li> <a href="#"><i class="fa fa-cogs" aria-hidden="true"></i> Meetings Invited</a> </li>
+		            <li> <a href="bookSlot.php"><i class="fa fa-thermometer-full" aria-hidden="true"></i> Book a Meeting</a> </li>
+		            <li> <a href="#"><i class="fa fa-paper-plane" aria-hidden="true"></i> Search a Meeting</a> </li>
+		            <li> <a href="#"><i class="fa fa-paper-plane" aria-hidden="true"></i> Invitations</a> </li>
+		            <li> <a href="logout.php"><i class="fa fa-paper-plane" aria-hidden="true"></i> Logout</a> </li>
+		        </ul>
+		    </nav>
+		    <!-- Page Content Holder -->
+		    <div id="content">
+		        <nav class="navbar navbar-default">
+		            <div class="container-fluid">
+		                <div class="navbar-header">
+		                    <button type="button" id="sidebarCollapse" class="navbar-btn"> <span></span> <span></span> <span></span> </button>
+		                </div>
+		                <!-- the following div is for the stuff at the right corner -->
+		                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		                    <ul class="nav navbar-nav navbar-right">
+		                        <li><a href="#" class="text-danger">Here Some Project PSD Are Not My But Code Is Done By Me</a></li>
+		                        <li><a href="#">Portfolio</a></li>
+		                    </ul>
+		                </div>
+		            </div>
+		        </nav>
+		        <div class="portfolio">
+		         <h2 class="title"><i class="fa fa-user" aria-hidden="true"></i>My Meeting</h2>
+		            <hr>
+		            <div class="row">
+									<div class =main-body>
+									 <br>
+									 <br>
+									</div>
 
- <div class =main-body>
- 	<br>
- 	<br>
- </div>
-
- <div class="offset-1 row row-content main-body">
- 	<div class = "col-12">
- 		<h3>Enter the Slot Details</h3>
- 	</div>
- 	<div>
- 	<br>
- 	<br>
- 	<br>
- 	</div>
- 	<div class ="col-12 col-md-9">
- 		<form name = "bookSlot" method="post" action="bookSlot.php" onsubmit="return validate()">
- 			<div class="form-group row">
- 				<label for="purpose" class="col-md-2 col-form-label">Product Name</label>
- 				<div class="col-md-10">
- 					<input type="text" name="shortDes" class="form-control" id="shortDes" placeholder="Purpose of Meeting(Short Description)">
- 				</div>
- 			</div>
- 			<div class="form-group row">
- 				<label for="date" class="col-md-2 col-form-label">Date of Meeting</label>
- 				<div class="col-md-10">
- 					<input type="date" name="date" id="date">
- 				</div>
- 			</div>
- 			<div class="form-group row">
- 				<label for="startSlot" class="col-md-2 col-form-label">Start Slot</label>
- 				<div class="col-md-10">
- 					<select class="form-control" name="startSlot" id="startSlot">
- 						<option>09:00</option>
- 						<option>09:30</option>
- 						<option>10:00</option>
- 						<option>10:30</option>
- 						<option>11:00</option>
- 						<option>11:30</option>
- 						<option>12:00</option>
- 						<option>12:30</option>
- 						<option>13:00</option>
- 						<option>13:30</option>
- 						<option>14:00</option>
- 						<option>14:30</option>
- 						<option>15:00</option>
- 						<option>15:30</option>
- 						<option>16:00</option>
- 						<option>16:30</option>
- 						<option>17:00</option>
- 						<option>17:30</option>
- 						<option>18:00</option>
- 					</select>
- 				</div>
- 					</div>
- 					<div class="form-group row">
- 						<label for="endSlot" class="col-md-2 col-form-label">End Slot</label>
- 						<div class="col-md-10">
- 							<select class="form-control" name="endSlot" id="endSlot">
- 								<option>09:00</option>
- 								<option>09:30</option>
- 								<option>10:00</option>
- 								<option>10:30</option>
- 								<option>11:00</option>
- 								<option>11:30</option>
- 								<option>12:00</option>
- 								<option>12:30</option>
- 								<option>13:00</option>
- 								<option>13:30</option>
- 								<option>14:00</option>
- 								<option>14:30</option>
- 								<option>15:00</option>
- 								<option>15:30</option>
- 								<option>16:00</option>
- 								<option>16:30</option>
- 								<option>17:00</option>
- 								<option>17:30</option>
- 								<option>18:00</option>
- 							</select>
- 						</div>
- 							</div>
- 						<div class="form-group row">
- 						<label for="longDes" class="col-md-2 col-form-label" >Description</label>
- 						<div class="col-md-10">
- 							<textarea name="longDes" class="form-control" rows="6" placeholder="describe your slot" id="longDes"></textarea>
- 						</div>
- 					</div>
- 					<div class="form-group row">
- 						<div class="offset-md-2 col-md-10">
- 							<input type="submit" class="btn btn-primary" name="bookSlot" value="Upload Details">
- 							<input type="reset" class="btn btn-primary" name="reset" value="Reset">
- 						</div>
- 					</div>
- 				</form>
- 			</div>
- 		</div>
+									<div class="offset-1 row row-content main-body">
+									 <div class = "col-12">
+										 <h3>Enter the Slot Details</h3>
+									 </div>
+									 <div>
+									 <br>
+									 <br>
+									 <br>
+									 </div>
+									 <div class ="col-12 col-md-9">
+										 <form name = "bookSlot" method="post" action="bookSlot.php" onsubmit="return validate()">
+											 <div class="form-group row">
+												 <label for="purpose" class="col-md-2 col-form-label">Product Name</label>
+												 <div class="col-md-10">
+													 <input type="text" name="shortDes" class="form-control" id="shortDes" placeholder="Purpose of Meeting(Short Description)">
+												 </div>
+											 </div>
+											 <div class="form-group row">
+												 <label for="date" class="col-md-2 col-form-label">Date of Meeting</label>
+												 <div class="col-md-10">
+													 <input type="date" name="date" id="date">
+												 </div>
+											 </div>
+											 <div class="form-group row">
+												 <label for="startSlot" class="col-md-2 col-form-label">Start Slot</label>
+												 <div class="col-md-10">
+													 <select class="form-control" name="startSlot" id="startSlot">
+														 <option>09:00</option>
+														 <option>09:30</option>
+														 <option>10:00</option>
+														 <option>10:30</option>
+														 <option>11:00</option>
+														 <option>11:30</option>
+														 <option>12:00</option>
+														 <option>12:30</option>
+														 <option>13:00</option>
+														 <option>13:30</option>
+														 <option>14:00</option>
+														 <option>14:30</option>
+														 <option>15:00</option>
+														 <option>15:30</option>
+														 <option>16:00</option>
+														 <option>16:30</option>
+														 <option>17:00</option>
+														 <option>17:30</option>
+														 <option>18:00</option>
+													 </select>
+												 </div>
+													 </div>
+													 <div class="form-group row">
+														 <label for="endSlot" class="col-md-2 col-form-label">End Slot</label>
+														 <div class="col-md-10">
+															 <select class="form-control" name="endSlot" id="endSlot">
+																 <option>09:00</option>
+																 <option>09:30</option>
+																 <option>10:00</option>
+																 <option>10:30</option>
+																 <option>11:00</option>
+																 <option>11:30</option>
+																 <option>12:00</option>
+																 <option>12:30</option>
+																 <option>13:00</option>
+																 <option>13:30</option>
+																 <option>14:00</option>
+																 <option>14:30</option>
+																 <option>15:00</option>
+																 <option>15:30</option>
+																 <option>16:00</option>
+																 <option>16:30</option>
+																 <option>17:00</option>
+																 <option>17:30</option>
+																 <option>18:00</option>
+															 </select>
+														 </div>
+															 </div>
+														 <div class="form-group row">
+														 <label for="longDes" class="col-md-2 col-form-label" >Description</label>
+														 <div class="col-md-10">
+															 <textarea name="longDes" class="form-control" rows="6" placeholder="describe your slot" id="longDes"></textarea>
+														 </div>
+													 </div>
+													 <div class="form-group row">
+														 <div class="offset-md-2 col-md-10">
+															 <input type="submit" class="btn btn-primary" name="bookSlot" value="Upload Details">
+															 <input type="reset" class="btn btn-primary" name="reset" value="Reset">
+														 </div>
+													 </div>
+												 </form>
+											 </div>
+										 </div>
+		                <!-- removed some unnwanted shit from here -->
+		            </div>
+		        </div>
+		    </div>
+		</div>
 
  		<script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
  		<script src="node_modules/popper.js/dist/umd/popper.min.js"></script>

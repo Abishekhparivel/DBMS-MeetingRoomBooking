@@ -177,99 +177,149 @@
     <link rel="stylesheet" href="css/responsive.css">
 	</head>
 	<body>
-		<header>
-			<div class = "container">
-				<h1 style="font-weight: 20px">My Meeting</h1>
-			</div>
-		</header>
-    <div class=main-body>
-			<br>
-			<br>
-      <br>
-      <br>
-		</div>
 
-		<div class="row main-body" style="margin:0 auto;">
-  <?php
-      if(is_null($slot)){
-        echo 'null is null';
-      }
-      else {
-        if($state !== 'CANCELLED' && $state !== 'FINISHED') {
-          echo "
-          <div class =\"col-12 col-md-9\">
-         			<div class=\"row\">
-         				<label for=\"purpose\" class=\"col-md-2 \"><h5>Purpose</h5></label>
-         				<div class=\"col-md-10\">
-                  <p name=\"shortDes\" id=\"purpose\">$shortDes</p>
-         				</div>
-         			</div>
-         			<div class=\"row\">
-         				<label for=\"date\" class=\"col-md-2 \"><h5>Date of Meeting</h5></label>
-         				<div class=\"col-md-10\">
-         					<p name=\"date\" id=\"date\">$date</p>
-         				</div>
-         			</div>
-         			<div class=\"row\">
-         				<label for=\"slot\" class=\"col-md-2 \"><h5>Slot</h5></label>
-         				<div class=\"col-md-10\">
-                  <p name=\"slot\" id=\"slot\">$slot</p>
-         				</div>
-         					</div>
-         						<div class=\"row\">
-         						<label for=\"longDes\" class=\"col-md-2 \" ><h5>Description</h5></label>
-         						<div class=\"col-md-10\">
-         							<p name=\"longDes\" id=\"longDes\">$longDes</p>
-         						</div>
-         					</div>
-                  <div class=\"row\">
-                  <label for=\"state\" class=\"col-md-2 \" ><h5>Booking State</h5></label>
-                  <div class=\"col-md-10\">
-                    <p name=\"state\" id=\"state\">$state</p>
-                  </div>
+    <div class="wrapper">
+        <!-- Sidebar Holder -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <div class="navbar-brand">
+                    <!-- nav bar heading goes here, i guess -->
                 </div>
+            </div>
+            <ul class="list-unstyled components">
+                <li> <a href="myMeetings.php"><i class="fa fa-university" aria-hidden="true"></i> myMeetings</a> </li>
+                <li> <a href="#"><i class="fa fa-cogs" aria-hidden="true"></i> Meetings Invited</a> </li>
+                <li> <a href="bookSlot.php"><i class="fa fa-thermometer-full" aria-hidden="true"></i> Book a Meeting</a> </li>
+                <li> <a href="#"><i class="fa fa-paper-plane" aria-hidden="true"></i> Search a Meeting</a> </li>
+                <li> <a href="#"><i class="fa fa-paper-plane" aria-hidden="true"></i> Invitations</a> </li>
+                <li> <a href="logout.php"><i class="fa fa-paper-plane" aria-hidden="true"></i> Logout</a> </li>
+            </ul>
+        </nav>
+        <!-- Page Content Holder -->
+        <div id="content">
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" id="sidebarCollapse" class="navbar-btn"> <span></span> <span></span> <span></span> </button>
+                    </div>
+                    <!-- the following div is for the stuff at the right corner -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="#" class="text-danger">Here Some Project PSD Are Not My But Code Is Done By Me</a></li>
+                            <li><a href="#">Portfolio</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div class="portfolio">
+             <h2 class="title"><i class="fa fa-user" aria-hidden="true"></i>My Meeting</h2>
+                <hr>
+                <div class="row">
+                  <div class=main-body>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                  </div>
 
-         			</div>
+                  <div class="row main-body" style="margin:0 auto;">
+                  <?php
+                    if(is_null($slot)){
+                      echo 'null is null';
+                    }
+                    else {
+                      if($state !== 'CANCELLED' && $state !== 'FINISHED') {
+                        echo "
+                        <div class =\"col-12 col-md-9\">
+                            <div class=\"row\">
+                              <label for=\"purpose\" class=\"col-md-2 \"><h5>Purpose</h5></label>
+                              <div class=\"col-md-10\">
+                                <p name=\"shortDes\" id=\"purpose\">$shortDes</p>
+                              </div>
+                            </div>
+                            <div class=\"row\">
+                              <label for=\"date\" class=\"col-md-2 \"><h5>Date of Meeting</h5></label>
+                              <div class=\"col-md-10\">
+                                <p name=\"date\" id=\"date\">$date</p>
+                              </div>
+                            </div>
+                            <div class=\"row\">
+                              <label for=\"slot\" class=\"col-md-2 \"><h5>Slot</h5></label>
+                              <div class=\"col-md-10\">
+                                <p name=\"slot\" id=\"slot\">$slot</p>
+                              </div>
+                                </div>
+                                  <div class=\"row\">
+                                  <label for=\"longDes\" class=\"col-md-2 \" ><h5>Description</h5></label>
+                                  <div class=\"col-md-10\">
+                                    <p name=\"longDes\" id=\"longDes\">$longDes</p>
+                                  </div>
+                                </div>
+                                <div class=\"row\">
+                                <label for=\"state\" class=\"col-md-2 \" ><h5>Booking State</h5></label>
+                                <div class=\"col-md-10\">
+                                  <p name=\"state\" id=\"state\">$state</p>
+                                </div>
+                              </div>
 
-              <div class =\"col-12 col-md-9\">
-             		<form method=\"post\">
-             			<div class=\"form-group row\">
-             				<label for=\"inviteesAdd\" class=\"col-md-2 col-form-label\"><h5>Add Invitee</h5></label>
-             				<div class=\"col-md-8\">
-                      <input type=\"text\" name=\"inviteesAdd\" class=\"form-control\" id=\"inviteesAdd\" placeholder=\"Mail of Person you want to invite\">
-             				</div>
-                    <div class=\"col-md-2\">
-                      <input type=\"submit\" class=\"button btn btn-success\" name=\"addInvitee\" value=\"Add Invitee\">
-             				</div>
-             			</div>
-                  <div class=\"form-group row\">
-             				<label for=\"inviteesRemove\" class=\"col-md-2 col-form-label\"><h5>Remove Invitee</h5></label>
-             				<div class=\"col-md-8\">
-                      <input type=\"text\" name=\"inviteesRemove\" class=\"form-control\" id=\"inviteesRemove\" placeholder=\"Mail of Person you want to decline meeting\">
-             				</div>
-                    <div class=\"col-md-2\">
-                      <input type=\"submit\" class=\"button btn btn-warning\" name=\"removeInvitee\" value=\"Remove Invitee\">
-             				</div>
-             			</div>
-                  <div class=\"form-group row\">
-         						<div class=\"offset-md-2 col-md-10\">
-         							<input type=\"submit\" class=\"button btn btn-danger\" name=\"cancelSlot\" value=\"Cancel Slot\">
-         						</div>
-         					</div>
-             	  </form>
-              </div>
-          ";
-        }
-        else{
-          echo "Your meeting is cancelled by you.";
-        }
-      }
-  ?>
-</div>
+                            </div>
+
+                            <div class =\"col-12 col-md-9\">
+                              <form method=\"post\">
+                                <div class=\"form-group row\">
+                                  <label for=\"inviteesAdd\" class=\"col-md-2 col-form-label\"><h5>Add Invitee</h5></label>
+                                  <div class=\"col-md-8\">
+                                    <input type=\"text\" name=\"inviteesAdd\" class=\"form-control\" id=\"inviteesAdd\" placeholder=\"Mail of Person you want to invite\">
+                                  </div>
+                                  <div class=\"col-md-2\">
+                                    <input type=\"submit\" class=\"button btn btn-success\" name=\"addInvitee\" value=\"Add Invitee\">
+                                  </div>
+                                </div>
+                                <div class=\"form-group row\">
+                                  <label for=\"inviteesRemove\" class=\"col-md-2 col-form-label\"><h5>Remove Invitee</h5></label>
+                                  <div class=\"col-md-8\">
+                                    <input type=\"text\" name=\"inviteesRemove\" class=\"form-control\" id=\"inviteesRemove\" placeholder=\"Mail of Person you want to decline meeting\">
+                                  </div>
+                                  <div class=\"col-md-2\">
+                                    <input type=\"submit\" class=\"button btn btn-warning\" name=\"removeInvitee\" value=\"Remove Invitee\">
+                                  </div>
+                                </div>
+                                <div class=\"form-group row\">
+                                  <div class=\"offset-md-2 col-md-10\">
+                                    <input type=\"submit\" class=\"button btn btn-danger\" name=\"cancelSlot\" value=\"Cancel Slot\">
+                                  </div>
+                                </div>
+                              </form>
+                            </div>
+                        ";
+                      }
+                      else{
+                        echo "Your meeting is cancelled by you.";
+                      }
+                    }
+                  ?>
+                  </div>
+
+                    <!-- removed some unnwanted shit from here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
 
 		<script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
 		<script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
 		<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 		<script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/index.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#sidebarCollapse').on('click', function () {
+            $('#sidebar').toggleClass('active');
+            $(this).toggleClass('active');
+        });
+    });
 	</body>
 </html>
